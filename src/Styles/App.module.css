@@ -1,0 +1,87 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: large;
+  color: white
+}
+.App a{
+  text-decoration-line: none;
+  color: white;
+}
+.Appdiv {
+  margin-left: 25%;
+  margin-right: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Articles a {
+  text-align: center;
+  text-decoration-line: none;
+  color: black;
+}
+.Articles ul {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.Articles ul:hover {
+  transform: scale(1.1);
+  /* color: greenyellow; */
+}
+.Articles li {
+  list-style-type: none;
+  text-align: left;
+  padding: 10px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 5px;
+}
+.ArticlesFull {
+  text-align: left;
+  text-decoration-line: none;
+  color: black;
+  font-size: x-large;
+  line-height: 250%;
+  list-style-type: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  list-style-type: none;
+  text-align: left;
+  padding: 10px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 5px;
+}
+
+.ArticlesFull div {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.ReqButton {
+  margin: 0 auto;
+  display: block;
+  background-color: #555555; /* Green */
+  border: none;
+  color: blanchedalmond;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 13px 50px;
+  border-radius: 10px;
+  opacity: 0.5;
+  margin-bottom: 100px;
+}
+.ReqButton:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.ReqButton:active {
+  opacity: 0.5;
+}
+.App h1 {
+  margin: 0 auto;
+  display: block;
+}
