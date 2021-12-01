@@ -6,8 +6,7 @@ const Articles = (props) => {
     return (
       <div className={s.App}>
         <h1>
-          Select sentence: 
-          <Link to="/">  http://localhost:3000/</Link>
+          <Link to="/"> Select sentence</Link>
         </h1>
       </div>
     );
