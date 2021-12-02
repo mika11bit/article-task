@@ -1,5 +1,5 @@
 import SentenceItem from "./Items/SentenceItem";
-import s from "../Styles/App.module.css";
+import styled from "styled-components";
 
 const Sentence = (props) => {
   let cutText = (text) => {
@@ -7,7 +7,7 @@ const Sentence = (props) => {
     return text + ".";
   };
   return (
-    <div className={s.Articles}>
+    <ArtDiv>
       {props.data.map((el, index) => {
         return (
           <SentenceItem
@@ -18,11 +18,37 @@ const Sentence = (props) => {
           />
         );
       })}
-      <button className={s.ReqButton} id="ReqButton" onClick={props.newRequest}>
+      <ReqButton id="ReqButton" onClick={props.newRequest}>
         Request
-      </button>
-    </div>
+      </ReqButton>
+    </ArtDiv>
   );
 };
+
+const ArtDiv = styled.div`
+  margin-left: 20%;
+  margin-right: 20%;
+`;
+const ReqButton = styled.button`
+  margin: 0 auto;
+  display: block;
+  background-color: #555555; /* Green */
+  border: none;
+  color: blanchedalmond;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 13px 50px;
+  border-radius: 10px;
+  opacity: 0.5;
+  margin-bottom: 100px;
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  &:active {
+    opacity: 0.5;
+  }
+`;
 
 export default Sentence;

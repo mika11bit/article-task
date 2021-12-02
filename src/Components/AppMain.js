@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import s from "./../Styles/App.module.css";
 import Sentence from "./Sentence";
 import Articles from "./Articles";
+import styled from "styled-components";
 
 class AppMain extends React.Component {
   state = {
@@ -32,13 +32,13 @@ class AppMain extends React.Component {
   render() {
     if (this.state.data == null) {
       return (
-        <div className={s.App}>
+        <LoadDiv>
           <h1>Loading API...</h1>
-        </div>
+        </LoadDiv>
       );
     } else
       return (
-        <div className={s.App}>
+        <MainDiv>
           <div>
             <Routes>
               <Route
@@ -54,14 +54,36 @@ class AppMain extends React.Component {
               <Route
                 path="Articles.js"
                 element={
-                  <Articles data={this.state.data} index={this.state.index} />
+                  <Articles
+                    LoadS={this.LoadS}
+                    data={this.state.data}
+                    index={this.state.index}
+                  />
                 }
               />
             </Routes>
           </div>
-        </div>
+        </MainDiv>
       );
   }
 }
+
+const MainDiv = styled.div`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+  color: white;
+`;
+const LoadDiv = styled.div`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+`;
 
 export default AppMain;
