@@ -39,30 +39,28 @@ class AppMain extends React.Component {
     } else
       return (
         <MainDiv>
-          <div>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Sentence
-                    data={this.state.data}
-                    updateData={this.updateData}
-                    newRequest={this.newRequest}
-                  />
-                }
-              />
-              <Route
-                path="Articles.js"
-                element={
-                  <Articles
-                    LoadS={this.LoadS}
-                    data={this.state.data}
-                    index={this.state.index}
-                  />
-                }
-              />
-            </Routes>
-          </div>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Sentence
+                  data={this.state.data}
+                  updateData={this.updateData}
+                  newRequest={this.newRequest}
+                />
+              }
+            />
+            <Route
+              path="Articles.js"
+              element={
+                <Articles
+                  LoadS={this.LoadS}
+                  data={this.state.data}
+                  index={this.state.index}
+                />
+              }
+            />
+          </Routes>
         </MainDiv>
       );
   }

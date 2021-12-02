@@ -7,9 +7,7 @@ const Articles = (props) => {
   } else
     return (
       <ArtDiv>
-        <li>
-          {props.index + 1}. {props.data[props.index]}
-        </li>
+        {props.index + 1}. {props.data[props.index]}
       </ArtDiv>
     );
 };
